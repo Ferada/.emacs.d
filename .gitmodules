@@ -1,0 +1,6 @@
+[submodule "evil-numbers"]
+	path = evil-numbers
+	url = git://github.com/cofi/evil-numbers.git
+[submodule "evil"]
+	path = evil
+	url = git://gitorious.org/evil/evil.git

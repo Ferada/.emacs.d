@@ -175,4 +175,5 @@ readable and adds it to the LOAD-PATH variable."
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; always require secrets to keep private stuff out of the custom variables
-(require 'secrets)
+(when-file-available "secrets.el"
+  (require 'secrets))

@@ -18,7 +18,9 @@
 ;; don't set via custom because it is a calculated value
 (setf custom-theme-directory (expand-file-name "themes" emacs-dot-dir))
 
-(load-theme 'grey-blue t)
+(if (string-lessp emacs-version "24")
+    (load-theme 'grey-blue)
+  (load-theme 'grey-blue t))
 
 (case system
   (straylight

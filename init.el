@@ -123,6 +123,15 @@ readable and adds it to the LOAD-PATH variable."
      (modify-syntax-entry ?\[ "(]" lisp-interaction-mode-syntax-table)
      (modify-syntax-entry ?\] ")[" lisp-interaction-mode-syntax-table)))
 
+(when-dir-available "redshank"
+  (require 'redshank-loader)
+  (redshank-setup
+   '(lisp-mode-hook
+     scheme-mode-hook
+     emacs-lisp-mode-hook
+     slime-repl-mode-hook)
+   t))
+
 (when (featurep 'bbdb)
   (setf bbdb-anniversary-format-alist '(("birthday" . "Birthday: %s (%d%s)")
                                         ("wedding" . "%s's %d%s wedding anniversary")

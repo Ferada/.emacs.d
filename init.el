@@ -97,7 +97,7 @@ readable and adds it to the LOAD-PATH variable."
     (global-set-key [S-f10] 'popup-ruler-vertical)))
 
 (unless (eq system 'straylight)
-  (when-file-available "paredit"
+  (when-file-available "paredit.el"
     (autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code." t)
     (let ((turn-on-paredit-mode (lambda () (paredit-mode 1))))
       ;; some hooks: lisp-mode-hook and scheme-mode-hook are recommended

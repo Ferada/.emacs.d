@@ -175,5 +175,4 @@ readable and adds it to the LOAD-PATH variable."
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; always require secrets to keep private stuff out of the custom variables
-(when-file-available "secrets.el"
-  (require 'secrets "secrets" nil))
+(ignore-errors (load-library "secrets.el.gpg"))

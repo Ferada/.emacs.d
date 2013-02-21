@@ -33,6 +33,10 @@
   (t
    (when (string-lessp emacs-version "23")
      (set-default-font "6x12" t))))
+
+(case system
+  (windows-nt
+   (scroll-bar-mode -1)))
 
 (defmacro when-file-available (pathname &rest body)
   "Run BODY if the PATHNAME (base directory is \"~/.emacs.d/~\") is

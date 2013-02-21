@@ -121,7 +121,12 @@ readable and adds it to the LOAD-PATH variable."
      (modify-syntax-entry ?\[ "(]" lisp-mode-syntax-table)
      (modify-syntax-entry ?\] ")[" lisp-mode-syntax-table)
      (modify-syntax-entry ?\[ "(]" lisp-interaction-mode-syntax-table)
-     (modify-syntax-entry ?\] ")[" lisp-interaction-mode-syntax-table)))
+     (modify-syntax-entry ?\] ")[" lisp-interaction-mode-syntax-table)
+
+     (when (featurep 'eldoc)
+       (eldoc-add-command
+        'paredit-backward-delete
+        'paredit-close-round))))
 
 (when-dir-available "redshank"
   (require 'redshank-loader)

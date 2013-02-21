@@ -7,6 +7,7 @@
    'grey-blue
    `(default ((t (:foreground ,fg :background ,bg))))
    '(region ((t (:foreground "#abadde" :background "#2d2d3a"))))
+   '(cursor ((t (:background "#d0d0df"))))
 
    '(modeline ((t (:foreground "#e8d5c0" :background "#101010"))))
    '(modeline-inactive ((t (:foreground "#e8d5c0" :background "#262626"))))

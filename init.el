@@ -18,19 +18,18 @@
 ;; don't set via custom because it is a calculated value
 (setf custom-theme-directory (expand-file-name "themes" emacs-dot-dir))
 
-(when (eq system 'straylight)
-  (load-theme 'grey-blue t)
+(load-theme 'grey-blue t)
 
-  (if (string-lessp emacs-version "23")
-      (set-default-font "6x12")
-      (set-default-font "Bitstream Vera Sans Mono-7.5")))
-
-(when (eq system 'goal-games)
-  ;; (load-theme 'grey-blue t)
-
-  (if (string-lessp emacs-version "23")
-      (set-default-font "6x12")
-    (set-default-font "Consolas-10.0")))
+(case system
+  (straylight
+   (set-frame-font "Bitstream Vera Sans Mono-7.5" t))
+  (goal-games
+   (set-frame-font "Consolas-10.0" t))
+  (sprawl
+   (set-frame-font "Consolas-9.0" t))
+  (t
+   (when (string-lessp emacs-version "23")
+     (set-default-font "6x12" t))))
 
 (defmacro when-file-available (pathname &rest body)
   "Run BODY if the PATHNAME (base directory is \"~/.emacs.d/~\") is

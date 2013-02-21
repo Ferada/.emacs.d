@@ -176,4 +176,4 @@ readable and adds it to the LOAD-PATH variable."
 
 ;; always require secrets to keep private stuff out of the custom variables
 (when-file-available "secrets.el"
-  (require 'secrets))
+  (require 'secrets "secrets" nil))

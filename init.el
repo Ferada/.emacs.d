@@ -17,6 +17,7 @@
 
 ;; don't set via custom because it is a calculated value
 (setf custom-theme-directory (expand-file-name "themes" emacs-dot-dir))
+(setf custom-theme-load-path '(custom-theme-directory t))
 
 (if (string-lessp emacs-version "24")
     (load-theme 'grey-blue)

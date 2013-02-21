@@ -95,6 +95,29 @@ readable and adds it to the LOAD-PATH variable."
     (require 'popup-ruler)
     (global-set-key [f10] 'popup-ruler)
     (global-set-key [S-f10] 'popup-ruler-vertical)))
+
+(unless (eq system 'straylight)
+  (when-file-available "paredit"
+    (autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code." t)
+    (let ((turn-on-paredit-mode (lambda () (paredit-mode 1))))
+      ;; some hooks: lisp-mode-hook and scheme-mode-hook are recommended
+      ;; in the paredit source code
+      (add-hook 'lisp-mode-hook turn-on-paredit-mode)
+      (add-hook 'scheme-mode-hook turn-on-paredit-mode)
+      (add-hook 'emacs-lisp-mode-hook turn-on-paredit-mode)
+      (add-hook 'slime-mode-hook turn-on-paredit-mode))))
+
+(eval-after-load "paredit"
+  '(progn
+     (define-key paredit-mode-map [(meta control shift up)] 'paredit-convolute-sexp)
+     ;; (define-key paredit-mode-map (kbd "{") 'paredit-open-curly)
+     ;; (define-key paredit-mode-map (kbd "}") 'paredit-close-curly)
+     ;; (modify-syntax-entry ?\{ "(}" lisp-mode-syntax-table)
+     ;; (modify-syntax-entry ?\} "){" lisp-mode-syntax-table)
+     (modify-syntax-entry ?\[ "(]" lisp-mode-syntax-table)
+     (modify-syntax-entry ?\] ")[" lisp-mode-syntax-table)
+     (modify-syntax-entry ?\[ "(]" lisp-interaction-mode-syntax-table)
+     (modify-syntax-entry ?\] ")[" lisp-interaction-mode-syntax-table)))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

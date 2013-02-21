@@ -110,7 +110,7 @@ readable and adds it to the LOAD-PATH variable."
       (add-hook 'scheme-mode-hook turn-on-paredit-mode)
       (add-hook 'emacs-lisp-mode-hook turn-on-paredit-mode)
       (add-hook 'slime-mode-hook turn-on-paredit-mode))))
-
+
 (eval-after-load "paredit"
   '(progn
      (define-key paredit-mode-map [(meta control shift up)] 'paredit-convolute-sexp)
@@ -122,6 +122,20 @@ readable and adds it to the LOAD-PATH variable."
      (modify-syntax-entry ?\] ")[" lisp-mode-syntax-table)
      (modify-syntax-entry ?\[ "(]" lisp-interaction-mode-syntax-table)
      (modify-syntax-entry ?\] ")[" lisp-interaction-mode-syntax-table)))
+
+(when (featurep 'bbdb)
+  (setf bbdb-anniversary-format-alist '(("birthday" . "Birthday: %s (%d%s)")
+                                        ("wedding" . "%s's %d%s wedding anniversary")
+                                        ("obit" . "Anniversary of death: %s (%d%s)"))
+        bbdb-check-zip-codes-p t
+        bbdb-default-country "Germany"
+        bbdb-north-american-phone-numbers-p nil))
+
+(when (featurep 'eldoc)
+  (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode))
+
+(when (featurep 'semantic)
+  (add-hook 'emacs-lisp-mode-hook 'semantic-default-elisp-setup))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

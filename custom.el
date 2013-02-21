@@ -5,10 +5,6 @@
  ;; If there is more than one, they won't work right.
  '(ack-mode-extension-alist (quote ((lisp-mode "lisp" "asd" "cl" "bil"))))
  '(ansi-color-names-vector ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
- '(bbdb-anniversary-format-alist (quote (("birthday" . "Birthday: %s (%d%s)") ("wedding" . "%s's %d%s wedding anniversary") ("obit" . "Anniversary of death: %s (%d%s)"))) nil (bbdb))
- '(bbdb-check-zip-codes-p t)
- '(bbdb-default-country "Germany")
- '(bbdb-north-american-phone-numbers-p nil)
  '(blink-cursor-mode nil)
  '(browse-url-browser-function (quote w3m-browse-url))
  '(calendar-week-start-day 1)
@@ -17,7 +13,6 @@
  '(diary-display-function (quote (fancy-diary-display)))
  '(diary-list-entries-hook (quote (include-other-diary-files bbdb-include-anniversaries sort-diary-entries)))
  '(display-time-world-list (quote (("America/Los_Angeles" "Seattle") ("America/New_York" "New York") ("Europe/London" "London") ("Europe/Berlin" "Berlin") ("Asia/Calcutta" "Bangalore") ("Asia/Tokyo" "Tokyo"))))
- '(emacs-lisp-mode-hook (quote (turn-on-eldoc-mode (lambda nil (paredit-mode 1)) semantic-default-elisp-setup)))
  '(erc-auto-query (quote window-noselect))
  '(erc-generate-log-file-name-function (quote erc-generate-log-file-name-short))
  '(erc-header-line-format nil)

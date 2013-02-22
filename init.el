@@ -100,6 +100,40 @@ readable and adds it to the LOAD-PATH variable."
     (global-set-key [f10] 'popup-ruler)
     (global-set-key [S-f10] 'popup-ruler-vertical)))
 
+(when-dir-available "slime"
+  (require 'slime-autoloads)
+  (slime-setup
+   '(slime-fancy
+     slime-asdf
+     slime-tramp
+     slime-presentations
+     slime-indentation))
+  (setf lisp-lambda-list-keyword-parameter-alignment t)
+  (setf lisp-lambda-list-keyword-alignment t)
+
+  ;; TODO: still need paredit-newline with evil?
+  (eval-after-load "slime"
+    '(progn
+       (define-key slime-mode-map (kbd "TAB") 'slime-indent-and-complete-symbol)
+       (define-key slime-repl-mode-map (kbd "C-c C-k") 'slime-repl-kill-input)
+       (define-key slime-parent-map (kbd "C-c s") 'slime-selector)
+       (define-key slime-parent-map (kbd "C-:") 'slime-edit-definition)))
+
+  (defun slime-local (port)
+    (interactive "P")
+    (let ((args '(4005)))
+      (when port
+        (let ((interactive (copy-list (cadr (interactive-form 'slime-connect)))))
+          (setf (cdr interactive) (cddr interactive)
+                args (eval interactive))))
+      (apply 'slime-connect "127.0.0.1" args))))
+
+(case system
+  (straylight
+   (setf inferior-lisp-program "/usr/bin/sbcl"))
+  (sprawl
+   (setf inferior-lisp-program "E:\\Programme\\sbcl\\sbcl")))
+
 (unless (eq system 'straylight)
   (when-file-available "paredit.el"
     (autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code." t)

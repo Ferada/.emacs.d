@@ -34,7 +34,7 @@
    (when (string-lessp emacs-version "23")
      (set-default-font "6x12" t))))
 
-(case system
+(case system-type
   (windows-nt
    (scroll-bar-mode -1)))
 

@@ -103,6 +103,16 @@ readable and adds it to the LOAD-PATH variable."
     (global-set-key [f10] 'popup-ruler)
     (global-set-key [S-f10] 'popup-ruler-vertical)))
 
+(when-dir-available "elscreen"
+  (require 'elscreen)
+  (elscreen-start)
+  (global-set-key [f11] 'elscreen-previous)
+  (global-set-key [f12] 'elscreen-next)
+  (global-set-key [XF86Back] 'elscreen-previous)
+  (global-set-key [XF86Forward] 'elscreen-next)
+  (global-set-key [S-f12] 'elscreen-create)
+  (global-set-key [C-f12] 'elscreen-kill))
+
 (when-dir-available "slime"
   (require 'slime-autoloads)
   (slime-setup

@@ -113,6 +113,14 @@ readable and adds it to the LOAD-PATH variable."
   (global-set-key [S-f12] 'elscreen-create)
   (global-set-key [C-f12] 'elscreen-kill))
 
+(when-dir-available "darkroom-mode"
+  (autoload 'darkroom-mode "darkroom-mode" "Distraction free editing mode." t)
+
+  (eval-after-load "darkroom-mode"
+    '(progn
+       (setf darkroom-mode-left-margin 100
+             darkroom-mode-right-margin 100))))
+
 (when-dir-available "slime"
   (require 'slime-autoloads)
   (slime-setup

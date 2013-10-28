@@ -192,6 +192,10 @@ readable and adds it to the LOAD-PATH variable."
      slime-repl-mode-hook)
    t))
 
+(when-file-available "window-numbering.el"
+  (require 'window-numbering)
+  (window-numbering-mode t))
+
 (when (featurep 'bbdb)
   (setf bbdb-anniversary-format-alist '(("birthday" . "Birthday: %s (%d%s)")
                                         ("wedding" . "%s's %d%s wedding anniversary")

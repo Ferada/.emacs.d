@@ -13,3 +13,6 @@
 [submodule "linum-relative"]
 	path = linum-relative
 	url = git://github.com/coldnew/linum-relative.git
+[submodule "markdown-mode"]
+	path = markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git

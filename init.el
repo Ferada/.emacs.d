@@ -184,6 +184,12 @@ readable and adds it to the LOAD-PATH variable."
 
 (when (featurep 'semantic)
   (add-hook 'emacs-lisp-mode-hook 'semantic-default-elisp-setup))
+
+(when-dir-available "markdown-mode"
+  (autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
+  (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
+  (add-hook-body 'markdown-mode-hook
+    (auto-fill-mode 1)))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

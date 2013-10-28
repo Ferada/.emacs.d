@@ -69,6 +69,9 @@ readable and adds it to the LOAD-PATH variable."
 (when (eq system 'straylight)
   (require 'site-gentoo))
 
+(global-set-key (kbd "M-n") 'hippie-expand)
+(global-set-key (kbd "C-c M-n") 'hippie-expand)
+
 (unless (eq system 'straylight)
   (when-dir-available "smex"
     (require 'smex)
@@ -223,10 +226,17 @@ readable and adds it to the LOAD-PATH variable."
   (make-local-variable 'kill-buffer-query-functions)
   (add-hook 'kill-buffer-query-functions 'kill-scratch-buffer))
 
+(setf column-number-mode t)
+(setf indent-tabs-mode nil)
+
 ;; TODO: maybe move something interesting here
 (global-unset-key (kbd "<insert>"))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+(put 'upcase-region 'disabled nil)
+(put 'narrow-to-page 'disabled nil)
+(put 'erase-buffer 'disabled nil)
 
 ;; always require secrets to keep private stuff out of the custom variables
 (ignore-errors (load-library "secrets.el.gpg"))

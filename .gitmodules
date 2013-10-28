@@ -7,3 +7,9 @@
 [submodule "undo-tree"]
 	path = undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
+[submodule "elscreen"]
+	path = elscreen
+	url = git://github.com/knu/elscreen.git
+[submodule "linum-relative"]
+	path = linum-relative
+	url = git://github.com/coldnew/linum-relative.git

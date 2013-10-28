@@ -90,6 +90,11 @@ readable and adds it to the LOAD-PATH variable."
   (require 'evil)
   (evil-mode 1)
 
+  (evil-define-command evil-show-buffers ()
+    "Shows the buffer-list."
+    :repeat nil
+    (list-buffers))
+
   (when-dir-available "evil-numbers"
     (require 'evil-numbers)
     (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)

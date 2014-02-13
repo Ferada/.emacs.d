@@ -220,6 +220,10 @@ readable and adds it to the LOAD-PATH variable."
   (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
   (add-hook-body 'markdown-mode-hook
     (auto-fill-mode 1)))
+
+(when-dir-available "git-modes"
+  (when-dir-available "magit"
+    (require 'magit)))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

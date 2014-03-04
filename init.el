@@ -225,6 +225,14 @@ readable and adds it to the LOAD-PATH variable."
 (when-dir-available "git-modes"
   (when-dir-available "magit"
     (require 'magit)))
+
+(when-dir-available "haskell-mode"
+  (require 'haskell-mode-autoloads))
+
+(when-dir-available "clojure-mode"
+  (autoload 'clojure-mode "clojure-mode" "Clojure" t)
+  (add-to-list 'auto-mode-alist '("\\.clj[sx]?\\'" . clojure-mode))
+  (add-hook 'clojure-mode-hook 'paredit-mode))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

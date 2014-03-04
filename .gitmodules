@@ -28,3 +28,6 @@
 [submodule "slime"]
 	path = slime
 	url = ./slime
+[submodule "haskell-mode"]
+	path = haskell-mode
+	url = ./haskell-mode

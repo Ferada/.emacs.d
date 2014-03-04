@@ -25,3 +25,6 @@
 [submodule "git-modes"]
 	path = git-modes
 	url = git@github.com:magit/git-modes.git
+[submodule "slime"]
+	path = slime
+	url = ./slime

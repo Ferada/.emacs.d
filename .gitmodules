@@ -31,3 +31,6 @@
 [submodule "haskell-mode"]
 	path = haskell-mode
 	url = ./haskell-mode
+[submodule "clojure-mode"]
+	path = clojure-mode
+	url = ./clojure-mode

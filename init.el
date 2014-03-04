@@ -7,7 +7,8 @@
 (defvar systems
   '((straylight . "straylight.rentiernetz")
     (sprawl     . "SPRAWL")
-    (goal-games . "EUGENB")))
+    (goal-games . "EUGENB")
+    (macrolet . "macrolet.net")))
 
 (defvar system (car (rassoc system-name systems)))
 

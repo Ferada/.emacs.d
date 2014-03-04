@@ -27,10 +27,10 @@
 	url = git@github.com:magit/git-modes.git
 [submodule "slime"]
 	path = slime
-	url = ./slime
+	url = git@github.com:slime/slime.git
 [submodule "haskell-mode"]
 	path = haskell-mode
-	url = ./haskell-mode
+	url = git@github.com:haskell/haskell-mode.git
 [submodule "clojure-mode"]
 	path = clojure-mode
-	url = ./clojure-mode
+	url = git@github.com:clojure-emacs/clojure-mode.git

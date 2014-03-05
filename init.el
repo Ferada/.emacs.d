@@ -2,6 +2,8 @@
 (dolist (mode '(menu-bar-mode tool-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
+(setf lexical-binding t)
+
 (require 'cl)
 
 (defvar systems

@@ -222,9 +222,10 @@ readable and adds it to the LOAD-PATH variable."
   (add-hook-body 'markdown-mode-hook
     (auto-fill-mode 1)))
 
-(when-dir-available "git-modes"
-  (when-dir-available "magit"
-    (require 'magit)))
+(unless (version< emacs-version "23.2")
+  (when-dir-available "git-modes"
+    (when-dir-available "magit"
+      (require 'magit))))
 
 (when-dir-available "haskell-mode"
   (require 'haskell-mode-autoloads))

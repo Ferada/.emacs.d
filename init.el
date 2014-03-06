@@ -2,9 +2,9 @@
 (dolist (mode '(menu-bar-mode tool-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
-(setf lexical-binding t)
-
 (require 'cl)
+
+(setf lexical-binding t)
 
 (defvar systems
   '((straylight . "straylight.rentiernetz")

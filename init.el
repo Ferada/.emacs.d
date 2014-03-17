@@ -236,6 +236,10 @@ readable and adds it to the LOAD-PATH variable."
   (autoload 'clojure-mode "clojure-mode" "Clojure" t)
   (add-to-list 'auto-mode-alist '("\\.clj[sx]?\\'" . clojure-mode))
   (add-hook 'clojure-mode-hook 'paredit-mode))
+
+(when-file-available "typopunct.el"
+  (autoload 'typopunct-mode "typopunct" "Minor mode for automatic typographical punctuation" t)
+  (add-hook 'text-mode 'typopunct-mode))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

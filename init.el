@@ -14,12 +14,35 @@
 
 (defvar system (car (rassoc system-name systems)))
 
-(defvar emacs-dot-dir (expand-file-name "~/.emacs.d/"))
+(unless (boundp 'user-emacs-directory)
+  (defvar user-emacs-directory
+    (concat (file-name-as-directory "~")
+            (file-name-as-directory ".emacs.d"))))
 
-(add-to-list 'load-path emacs-dot-dir)
+(defun user-directory (directory)
+  (concat user-emacs-directory
+          (file-name-as-directory directory)))
+
+(defun user-file (filename)
+  (concat user-emacs-directory
+          filename))
+
+(defvar user-lisp-directory
+  (concat user-emacs-directory
+          (file-name-as-directory "lisp")))
+
+(defun user-lisp-directory (directory)
+  (concat user-lisp-directory
+          (file-name-as-directory directory)))
+
+(defun user-lisp-file (filename)
+  (concat user-lisp-directory
+          filename))
+
+(add-to-list 'load-path user-lisp-directory)
 
 ;; don't set via custom because it is a calculated value
-(setf custom-theme-directory (expand-file-name "themes" emacs-dot-dir))
+(setf custom-theme-directory (user-directory "themes"))
 (setf custom-theme-load-path '(custom-theme-directory t))
 
 (if (string-lessp emacs-version "24")
@@ -41,21 +64,21 @@
   (windows-nt
    (scroll-bar-mode -1)))
 
-(defmacro when-file-available (pathname &rest body)
-  "Run BODY if the PATHNAME (base directory is \"~/.emacs.d/~\") is
+(defmacro when-lisp-file-available (pathname &rest body)
+  "Run BODY if the PATHNAME (base directory is \"~/.emacs.d/lisp/\") is
 readable."
   (declare (indent defun))
   (let ((sym (gensym)))
-    `(let ((,sym (expand-file-name ,pathname emacs-dot-dir)))
+    `(let ((,sym (user-lisp-file ,pathname)))
        (when (file-readable-p ,sym)
          ,@body))))
 
-(defmacro when-dir-available (pathname &rest body)
-  "Run BODY if the PATHNAME (base directory is \"~/.emacs.d/~\") is
+(defmacro when-lisp-dir-available (pathname &rest body)
+  "Run BODY if the PATHNAME (base directory is \"~/.emacs.d/lisp/\") is
 readable and adds it to the LOAD-PATH variable."
   (declare (indent defun))
   (let ((sym (gensym)))
-    `(let ((,sym (expand-file-name ,pathname emacs-dot-dir)))
+    `(let ((,sym (user-lisp-file ,pathname)))
        (when (file-readable-p ,sym)
          (add-to-list 'load-path ,sym)
          ,@body))))
@@ -65,7 +88,7 @@ readable and adds it to the LOAD-PATH variable."
   (declare (indent defun))
   `(add-hook ,hook (lambda () ,@body)))
 
-(setf custom-file (expand-file-name "custom.el" emacs-dot-dir))
+(setf custom-file (user-file "custom.el"))
 
 (load custom-file)
 
@@ -76,7 +99,7 @@ readable and adds it to the LOAD-PATH variable."
 (global-set-key (kbd "C-c M-n") 'hippie-expand)
 
 (unless (eq system 'straylight)
-  (when-dir-available "smex"
+  (when-lisp-dir-available "smex"
     (require 'smex)
     (smex-initialize)
 
@@ -85,11 +108,11 @@ readable and adds it to the LOAD-PATH variable."
     ;; This is your old M-x.
     (global-set-key (kbd "C-c M-x") 'execute-extended-command)))
 
-(when-dir-available "undo-tree"
+(when-lisp-dir-available "undo-tree"
   (require 'undo-tree)
   (global-undo-tree-mode))
 
-(when-dir-available "evil"
+(when-lisp-dir-available "evil"
   (require 'evil)
   (evil-mode 1)
 
@@ -98,20 +121,20 @@ readable and adds it to the LOAD-PATH variable."
     :repeat nil
     (list-buffers))
 
-  (when-dir-available "evil-numbers"
+  (when-lisp-dir-available "evil-numbers"
     (require 'evil-numbers)
     (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
     (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)))
 
-(when-file-available "column-marker.el"
+(when-lisp-file-available "column-marker.el"
   (require 'column-marker)
 
-  (when-file-available "popup-ruler.el"
+  (when-lisp-file-available "popup-ruler.el"
     (require 'popup-ruler)
     (global-set-key [f10] 'popup-ruler)
     (global-set-key [S-f10] 'popup-ruler-vertical)))
 
-(when-dir-available "elscreen"
+(when-lisp-dir-available "elscreen"
   (require 'elscreen)
   (elscreen-start)
   (global-set-key [f11] 'elscreen-previous)
@@ -121,7 +144,7 @@ readable and adds it to the LOAD-PATH variable."
   (global-set-key [S-f12] 'elscreen-create)
   (global-set-key [C-f12] 'elscreen-kill))
 
-(when-dir-available "darkroom-mode"
+(when-lisp-dir-available "darkroom-mode"
   (autoload 'darkroom-mode "darkroom-mode" "Distraction free editing mode." t)
 
   (eval-after-load "darkroom-mode"
@@ -129,7 +152,7 @@ readable and adds it to the LOAD-PATH variable."
        (setf darkroom-mode-left-margin 100
              darkroom-mode-right-margin 100))))
 
-(when-dir-available "slime"
+(when-lisp-dir-available "slime"
   (require 'slime-autoloads)
   (slime-setup
    '(slime-fancy
@@ -164,7 +187,7 @@ readable and adds it to the LOAD-PATH variable."
    (setf inferior-lisp-program "E:\\Programme\\sbcl\\sbcl")))
 
 (unless (eq system 'straylight)
-  (when-dir-available "paredit"
+  (when-lisp-dir-available "paredit"
     (autoload 'paredit-mode "paredit" "Minor mode for pseudo-structurally editing Lisp code." t)
     (let ((turn-on-paredit-mode (lambda () (paredit-mode 1))))
       ;; some hooks: lisp-mode-hook and scheme-mode-hook are recommended
@@ -191,7 +214,7 @@ readable and adds it to the LOAD-PATH variable."
         'paredit-backward-delete
         'paredit-close-round))))
 
-(when-dir-available "redshank"
+(when-lisp-dir-available "redshank"
   (require 'redshank-loader)
   (redshank-setup
    '(lisp-mode-hook
@@ -200,7 +223,7 @@ readable and adds it to the LOAD-PATH variable."
      slime-repl-mode-hook)
    t))
 
-(when-file-available "window-numbering.el"
+(when-lisp-file-available "window-numbering.el"
   (require 'window-numbering)
   (window-numbering-mode t))
 
@@ -218,26 +241,26 @@ readable and adds it to the LOAD-PATH variable."
 (when (featurep 'semantic)
   (add-hook 'emacs-lisp-mode-hook 'semantic-default-elisp-setup))
 
-(when-dir-available "markdown-mode"
+(when-lisp-dir-available "markdown-mode"
   (autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
   (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
   (add-hook-body 'markdown-mode-hook
     (auto-fill-mode 1)))
 
 (unless (version< emacs-version "23.2")
-  (when-dir-available "git-modes"
-    (when-dir-available "magit"
+  (when-lisp-dir-available "git-modes"
+    (when-lisp-dir-available "magit"
       (require 'magit))))
 
-(when-dir-available "haskell-mode"
+(when-lisp-dir-available "haskell-mode"
   (require 'haskell-mode-autoloads))
 
-(when-dir-available "clojure-mode"
+(when-lisp-dir-available "clojure-mode"
   (autoload 'clojure-mode "clojure-mode" "Clojure" t)
   (add-to-list 'auto-mode-alist '("\\.clj[sx]?\\'" . clojure-mode))
   (add-hook 'clojure-mode-hook 'paredit-mode))
 
-(when-file-available "typopunct.el"
+(when-lisp-file-available "typopunct.el"
   (autoload 'typopunct-mode "typopunct" "Minor mode for automatic typographical punctuation" t)
   (add-hook 'text-mode 'typopunct-mode))
 

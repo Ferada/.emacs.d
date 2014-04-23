@@ -40,3 +40,6 @@
 [submodule "lisp/org-mode"]
 	path = lisp/org-mode
 	url = git://orgmode.org/org-mode.git
+[submodule "lisp/pangu-spacing"]
+	path = lisp/pangu-spacing
+	url = git@github.com:coldnew/pangu-spacing.git

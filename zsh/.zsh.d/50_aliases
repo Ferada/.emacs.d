@@ -1,0 +1,34 @@
+alias c=clear
+alias p='ps aux'
+alias jobs='jobs -p'
+alias j=jobs
+alias pd=pushd
+alias dp=popd
+alias h=history
+alias cdc='cd; clear'
+alias cls='clear; ls'
+alias f=file
+
+alias l=ls
+# alias ls='ls -CF'
+alias la='ls -lsah'
+alias lsd='ls -d *(-/DN)'
+alias d='ls --color=auto'
+
+alias start-keychain='eval `keychain --eval id_dsa CE675F00`'
+alias gtypist='LC_ALL="de_DE" urxvt -e gtypist ttde.typ'
+
+alias video='cd /mnt/usb1/media/video'
+alias music='cd /mnt/usb0/media/music'
+
+alias i=info
+
+alias uiae='setxkbmap de && xmodmap ~/.xmodmaprc'
+alias asdf='setxkbmap de neo'
+
+alias fe='feh *'
+alias mpl='mplayer *.(wmv|mpg|avi|divx|mp4|flv|mpeg)'
+
+alias eix='eix -F'
+
+alias sbcl='rlwrap sbcl'

@@ -1,0 +1,54 @@
+#!/bin/zsh
+
+#local git_b
+#git_b="$(get_git_prompt_info '%b')"
+#PROMPT="%(?..%U%?%u:) $git_b %40&lt;...&lt;%/%(#.%U&gt;%u.%B&gt;%b) "
+
+#alias slrn="LC_ALL=en_GB.iso-8859-1 LANG=en_GB.iso-8859-1 luit slrn"
+
+#PROMPT=$'%{\e[0;32m%}%UTell zsh what to do!%u %{\e[0m%}'
+
+RPROMPT=
+
+#if [[ -n $git_b ]]; then
+#    RPROMPT="[git:$git_b] "
+#fi
+
+PS1="%j %. %# "
+# RPROMPT+="%D{%a %b %d %H:%M}"
+
+if [[ $TERM = *screen* ]]; then
+  # http://www.princeton.edu/~kmccarty/zsh.html
+  # screen manual, enabling dynamic titles
+  PS1=$'%{\ek\e\\%}'"$PS1"
+fi
+
+# for screen, setting the title
+function title_set () {
+  print -nR $'\033k'$1$'\033'\\\
+}
+
+#for everyone
+function status_set () {
+  print "\e]0;$1\a\c"
+}
+
+case $TERM in
+  screen|*rxvt*)
+    precmd () {
+      TAB_TITLE_PROMPT=`print -Pn "%~" | sed "s:\([~/][^/]*\)/.*/:\1...:"`
+      status_set "$TAB_TITLE_PROMPT"
+      case $TERM in
+        *screen*) title_set "zsh";;
+      esac
+    }
+
+    preexec () {
+      local -a cmd; cmd=(${(z)1})
+      status_set "$cmd[1]:t"
+      case $TERM in
+        *screen*) title_set "$cmd[1]:t";;
+      esac
+    }
+  ;;
+esac

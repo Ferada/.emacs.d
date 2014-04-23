@@ -1,0 +1,1 @@
+zstyle ':completion::complete:*' use-cache 1

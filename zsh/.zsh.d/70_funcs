@@ -1,0 +1,32 @@
+function mkc () {
+  mkdir $1 && cd $1
+}
+
+function calc () {
+  case $2 in
+    "") SCALE=2 ;;
+    *) SCALE=$2 ;;
+  esac
+  echo "scale=$SCALE; $1" | bc -l
+}
+
+## intended to work like "lpf grep *.R filterFor", moving the last
+## parameter to the front
+function lpf () {
+  command=$1
+  shift
+  last=$@[$#]
+  # delete last argument
+  argv[$#]=
+  $command $last $@
+}
+
+## goes n levels up in the path hierarchy
+function up () {
+  P=$PWD
+  for ((i=1; i <= $1; i++))
+  do
+    P=$P/..
+  done
+  cd $P
+}

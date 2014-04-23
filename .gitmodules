@@ -1,45 +1,45 @@
 [submodule "evil-numbers"]
-	path = emacs/evil-numbers
+	path = emacs/.emacs.d/lisp/evil-numbers
 	url = git://github.com/cofi/evil-numbers.git
 [submodule "evil"]
-	path = emacs/evil
+	path = emacs/.emacs.d/lisp/evil
 	url = git://gitorious.org/evil/evil.git
 [submodule "undo-tree"]
-	path = emacs/undo-tree
+	path = emacs/.emacs.d/lisp/undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
 [submodule "elscreen"]
-	path = emacs/elscreen
+	path = emacs/.emacs.d/lisp/elscreen
 	url = git://github.com/knu/elscreen.git
 [submodule "linum-relative"]
-	path = emacs/linum-relative
+	path = emacs/.emacs.d/lisp/linum-relative
 	url = git://github.com/coldnew/linum-relative.git
 [submodule "markdown-mode"]
-	path = emacs/markdown-mode
+	path = emacs/.emacs.d/lisp/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
 [submodule "paredit"]
-	path = emacs/paredit
+	path = emacs/.emacs.d/lisp/paredit
 	url = http://mumble.net/~campbell/git/paredit.git/
 [submodule "magit"]
-	path = emacs/magit
+	path = emacs/.emacs.d/lisp/magit
 	url = git://github.com/magit/magit.git
 [submodule "git-modes"]
-	path = emacs/git-modes
+	path = emacs/.emacs.d/lisp/git-modes
 	url = git@github.com:magit/git-modes.git
 [submodule "slime"]
-	path = emacs/slime
+	path = emacs/.emacs.d/lisp/slime
 	url = git@github.com:slime/slime.git
 [submodule "haskell-mode"]
-	path = emacs/haskell-mode
+	path = emacs/.emacs.d/lisp/haskell-mode
 	url = git@github.com:haskell/haskell-mode.git
 [submodule "clojure-mode"]
-	path = emacs/clojure-mode
+	path = emacs/.emacs.d/lisp/clojure-mode
 	url = git@github.com:clojure-emacs/clojure-mode.git
 [submodule "lisp/evil-leader"]
-	path = emacs/evil-leader
+	path = emacs/.emacs.d/lisp/evil-leader
 	url = https://github.com/cofi/evil-leader
 [submodule "lisp/org-mode"]
-	path = emacs/org-mode
+	path = emacs/.emacs.d/lisp/org-mode
 	url = git://orgmode.org/org-mode.git
 [submodule "lisp/pangu-spacing"]
-	path = emacs/pangu-spacing
+	path = emacs/.emacs.d/lisp/pangu-spacing
 	url = git@github.com:coldnew/pangu-spacing.git

@@ -282,6 +282,9 @@ readable and adds it to the LOAD-PATH variable."
 
 (when-lisp-dir-available "linum-relative"
   (require 'linum-relative))
+
+(when-lisp-dir-available "pangu-spacing"
+  (require 'pangu-spacing))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

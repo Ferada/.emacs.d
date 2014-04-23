@@ -1,3 +1,6 @@
+set nocompatible
+set backspace=indent,eol,start
+
 " kill popup dialogs
 set go+=c
 

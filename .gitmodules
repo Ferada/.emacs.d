@@ -34,3 +34,6 @@
 [submodule "clojure-mode"]
 	path = lisp/clojure-mode
 	url = git@github.com:clojure-emacs/clojure-mode.git
+[submodule "lisp/evil-leader"]
+	path = lisp/evil-leader
+	url = https://github.com/cofi/evil-leader

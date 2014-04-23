@@ -80,7 +80,16 @@
  ;;(paren-face-nomatch)
 
  '(fringe ((t (:foreground "#d0d0df" :background "#090910")))) ; text field border
- '(linum ((t (:foreground "#b7af9f" :background "#090910"))))
+
+ '(linum
+   ((((class color) (min-colors 256))
+     (:foreground "#b2b2b2" :background "#080808"))
+    (t (:foreground "#b7af9f" :background "#090910"))))
+
+ '(linum-relative-current-face
+   ((((class color) (min-colors 256))
+     (:foreground "#b2b2b2" :background "#262626"))
+    (t (:foreground "#b7af9f" :background "#282833"))))
 
  '(underline ((t (:underline t))))
  '(italic ((t (:italic t))))

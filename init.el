@@ -279,6 +279,9 @@ readable and adds it to the LOAD-PATH variable."
 (when-lisp-file-available "typopunct.el"
   (autoload 'typopunct-mode "typopunct" "Minor mode for automatic typographical punctuation" t)
   (add-hook 'text-mode 'typopunct-mode))
+
+(when-lisp-dir-available "linum-relative"
+  (require 'linum-relative))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

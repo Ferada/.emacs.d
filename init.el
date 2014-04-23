@@ -280,6 +280,11 @@ readable and adds it to the LOAD-PATH variable."
   (autoload 'typopunct-mode "typopunct" "Minor mode for automatic typographical punctuation" t)
   (add-hook 'text-mode 'typopunct-mode))
 
+(when-lisp-dir-available "org-mode/lisp"
+  (add-to-list 'load-path (user-lisp-directory "org-mode/contrib/lisp"))
+  (setf org-plantuml-jar-path "/home/ferada/src/plantuml/plantuml.jar")
+  (org-babel-do-load-languages 'org-babel-load-languages '((ditaa . t) (plantuml . t))))
+
 (when-lisp-dir-available "linum-relative"
   (require 'linum-relative))
 

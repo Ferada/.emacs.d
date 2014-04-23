@@ -1,0 +1,8 @@
+application/pgp-encrypted; gpg -d '%s'; needsterminal
+image/*; display -immutable '%s'; edit=gimp '%s'
+image/jpeg; display -immutable '%s'; edit=gimp '%s'
+application/pdf; mupdf '%s'
+application/ogg; mplayer '%s'; needsterminal
+text/postscript; gv '%s'
+#text/html; firefox -a firefox -remote 'openURL(file://%s,new-tab)' || firefox '%s'; description=HTML Text; nametemplate=%s.html; test=test "$DISPLAY" != ""
+text/html; links -force-html '%s'; needsterminal

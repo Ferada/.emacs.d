@@ -1,0 +1,159 @@
+Xft.dpi:86.0,
+
+Xcursor.theme:neutral
+
+yeahconsole*term:urxvt
+yeahconsole*handleColor:#fa1
+centerim*urgentOnBell:true
+
+!! ---| xpdf options |--- {{{
+xpdf.initialZoom:width
+xpdf*Foreground:#181818
+xpdf*Background:#e1dad3
+xpdf*viKeys:true
+!xpdf*fontList:"Terminus 9"
+!}}}
+
+!! ---| urxvt options |--- {{{
+URxvt*perl-lib:/usr/lib/urxvt/perl
+URxvt*perl-ext-common:default,matcher,searchable-scrollback
+!URxvt*urlLauncher:konq
+URxvt*urlLauncher:firefox
+URxvt*matcher.button:1
+URxvt*loginShell:true
+URxvt*scrollBar:false
+!URxvt*internalBorder:2
+!URxvt*shading:20
+!URxvt*tintColor:white
+!URxvt*inheritPixmap:true
+URxvt*font:-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-1
+URxvt*boldFont:-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-1
+URxvt*saveLines:8000
+urxvt*scrollTtyOutput:true
+urxvt*scrollTtyKeypress:true
+!URxvt*termName:rxvt
+!URxvt*keysym.Home:\e[1~
+!URxvt*keysym.End:\e[4~
+!URxvt*geometry:83x26
+!}}}
+
+!! ---| xterm options |--- {{{
+XTerm*toolBar:false
+XTerm*loginShell:true
+XTerm*saveLines:8192
+!XTerm*shading:80
+!XTerm*multiScroll:true
+!XTerm*utmpInhibit:false
+XTerm*jumpScroll:true
+!XTerm*waitForMap:true
+XTerm*scrollBar:false
+XTerm*utf8:2
+XTerm*metaSendsEscape:true
+XTerm*internalBorder:1
+!XTerm*boldMode:true
+XTerm*boldMode:false
+XTerm*font:-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-1
+!XTerm*boldFont:-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-1
+XTerm*font2:-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-1
+XTerm*font3:-*-terminus-bold-r-normal-*-14-*-*-*-*-*-iso10646-1
+XTerm*font4:-*-terminus-bold-r-normal-*-16-*-*-*-*-*-iso10646-1
+XTerm*font5:-*-terminus-bold-r-normal-*-20-*-*-*-*-*-iso10646-1
+XTerm*font6:-*-terminus-bold-r-normal-*-24-*-*-*-*-*-iso10646-1
+!}}}
+
+!! ---| xclock |--- {{{
+xclock*update:1
+xclock*reverseVideo:true
+xclock*hourColor:blue
+xclock*minuteColor:blue
+xclock*secondColor:blue
+xclock*majorColor:white
+xclock*minorColor:blue
+xclock*buffer:true
+!}}}
+
+.xmessage.form.okay.shapeStyle:rectangle
+.xmessage.form.okay.background:IndianRed
+.xmessage.form.okay.foreground:ivory3
+.xmessage*message*background:ivory3
+
+!! ---| latin2 urxvt |--- {{{
+latin2*font:-*-terminus-medium-r-*-*-12-*-*-*-*-*-iso8859-2
+latin2*boldFont:-*-terminus-medium-r-*-*-12-*-*-*-*-*-iso8859-2
+latin2*font2:-*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso8859-2
+latin2*font3:-*-terminus-bold-r-normal-*-14-*-*-*-*-*-iso8859-2
+latin2*font4:-*-terminus-bold-r-normal-*-16-*-*-*-*-*-iso8859-2
+latin2*font5:-*-terminus-bold-r-normal-*-20-*-*-*-*-*-iso8859-2
+latin2*font6:-*-terminus-bold-r-normal-*-24-*-*-*-*-*-iso8859-2
+latin2*utf8:0
+!}}}
+
+!! Color schemes
+
+! ---| my new colorcheme |--- {{{
+URxvt*cursorColor:#a0ff00
+URxvt*cursorColor2:#880000
+URxvt*colorBD:#fdfdab
+URxvt*colorUL:#abfdfd
+URxvt*background:  #303030
+URxvt*foreground:  #efefef
+!Colors
+! Black
+URxvt*color0:      #303030
+URxvt*color8:      #999999
+! Red
+URxvt*color1:      #FF4747
+URxvt*color9:      #FF6767
+! Green
+URxvt*color2:      #7cba33
+URxvt*color10:     #a7d671
+! Yellow
+URxvt*color3:      #FDD338
+URxvt*color11:     #F4D461
+! Blue
+URxvt*color4:      #619AF4
+URxvt*color12:     #5496FF
+! Purple
+URxvt*color5:      #A443BC
+URxvt*color13:     #b06dc1
+! Cyan
+URxvt*color6:      #47E0FF
+URxvt*color14:     #2ED9FB
+! White
+URxvt*color7:      #EFEFEF
+URxvt*color15:     #DEDEDE
+!}}}
+
+!! ---| log urxvt colorcheme |--- {{{
+log*cursorColor:#efefef
+log*cursorColor2:#efefef
+!}}}
+
+!! ---| xcalc colorcheme |--- {{{
+*Form.background: gray40
+*Command.background: gray
+
+*xcalc*screen*background: rgb:f/e/8
+
+*xcalc*button22.background: white
+*xcalc*button23.background: white
+*xcalc*button24.background: white
+*xcalc*button27.background: white
+*xcalc*button28.background: white
+*xcalc*button29.background: white
+*xcalc*button32.background: white
+*xcalc*button33.background: white
+*xcalc*button34.background: white
+*xcalc*button37.background: white
+*xcalc*button38.background: white
+*xcalc*button39.background: white
+
+*xcalc*button20.background: rgb:e/a/7
+*xcalc*button25.background: rgb:e/a/7
+*xcalc*button30.background: rgb:e/a/7
+*xcalc*button35.background: rgb:e/a/7
+*xcalc*button40.background: rgb:e/a/7
+!}}}
+
+! vim:foldmethod=marker
+!!!EOF

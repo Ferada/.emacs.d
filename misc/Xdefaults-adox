@@ -1,0 +1,109 @@
+! Xdefaults by adox (anope.c@gmail.com) http://mcx2.org
+! Xft.dpi: 80
+! Xft.hinting: 1
+! Xft.hintstyle: hintmedium
+
+! -/ Color Set (a) /-
+colorsa*background: #202427
+colorsa*foreground: #e1e1e1
+colorsa*cursorColor: #98b4c8
+colorsa*color0: #0a0a0a
+colorsa*color8: #71a3b7
+colorsa*color1: #dca3a3
+colorsa*color9: #f4a45f
+colorsa*color2: #afc5af
+colorsa*color10: #95c749
+colorsa*color3: #ffffef
+colorsa*color11: #cdcdc1
+colorsa*color4: #8e9fbc
+colorsa*color12: #8e9fbc
+colorsa*color5: #cdbfaf
+colorsa*color13: #cdbfaf
+colorsa*color6: #a1b5cd
+colorsa*color14: #a1b5cd
+colorsa*color7: #ffffff
+colorsa*color15: #dedede
+colorsa*scrollBar:		false
+colorsa*font:		cure
+colorsa*saveLines:	5000
+
+
+URxvt*urlLauncher:              opera
+URxvt*perl-ext:                 default,matcher
+URxvt*matcher.button:           1
+URxvt*matcher.pattern.1:        \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+URxvt*matcher.pattern.2:        \\B(/\\S+?):(\\d+)(?=:|$)
+
+*charClass:     33:48,37:48,61:48,63:48,58:48,45-47:48,38:48,126:48
+*cutchars: !"$%'()*+,;<>[\]^`
+
+*font: -*-proggytiny-medium-*-normal-*-10-80-96-*-*-*-*-*
+! *font: -monotype-andale mono-medium-r-normal--10-59-120-0-c-0-iso10646-1
+*boldFont:
+*faceSize: 10
+*jumpScroll: true
+*multiScroll: true
+*boldMode: false
+*scrollTtyKeypress: true
+*scrollBar: false
+*cutNewline: false
+*scrollTtyOutput: false
+*scrollKey: true
+*secondaryScroll: true
+*cursorBlink: true
+*dynamicColors: false
+*saveLines: 3000
+*geometry: 80x24
+
+*inheritPixmap: true
+*shading: 19 ! default 25
+
+*background: black
+! *foreground: #1d626c
+! *foreground: #C0C0C0
+*foreground: #626262
+
+*cursorColor: #707678
+*color0: #2c2d2e
+*color1: #ae4747
+*color2: #696c59
+*color3: #c7c93d
+*color4: #6f99b4
+*color5: #aa8cbf
+*color6: #68b4b1
+*color7: #707678
+*color8: #a3a5a6
+*color9: #ee6363
+*color10: #90a57d
+*color11: #d0c54d
+*color12: #7c96b0
+*color13: #8f4c70
+*color14: #2d8285
+*color15: #e2e2e2
+
+irssi*font:	neep-alt-10
+irssi*background: #202427
+irssi*foreground: #e1e1e1
+irssi*cursorColor: #98b4c8
+irssi*cursorBlink: true
+irssi*boldMode: false
+
+irssi*color0: #0a0a0a
+irssi*color8: #71a3b7
+irssi*color1: #dca3a3
+irssi*color9: #f4a45f
+irssi*color2: #afc5af
+irssi*color10: #95c749
+irssi*color3: #ffffef
+irssi*color11: #cdcdc1
+irssi*color4: #4a5463
+irssi*color12: #4a5463
+irssi*color5: #cdbfaf
+irssi*color13: #cdbfaf
+irssi*color6: #a1b5cd
+irssi*color14: #a1b5cd
+irssi*color7: #ffffff
+irssi*color15: #dedede
+irssi*eightBitInput:   false
+irssi*metaSendsEscape: true
+irssi*scrollBar:	false

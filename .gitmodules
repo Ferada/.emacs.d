@@ -37,3 +37,6 @@
 [submodule "lisp/evil-leader"]
 	path = lisp/evil-leader
 	url = https://github.com/cofi/evil-leader
+[submodule "lisp/org-mode"]
+	path = lisp/org-mode
+	url = git://orgmode.org/org-mode.git

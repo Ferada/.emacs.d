@@ -1,45 +1,45 @@
 [submodule "evil-numbers"]
-	path = lisp/evil-numbers
+	path = emacs/evil-numbers
 	url = git://github.com/cofi/evil-numbers.git
 [submodule "evil"]
-	path = lisp/evil
+	path = emacs/evil
 	url = git://gitorious.org/evil/evil.git
 [submodule "undo-tree"]
-	path = lisp/undo-tree
+	path = emacs/undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
 [submodule "elscreen"]
-	path = lisp/elscreen
+	path = emacs/elscreen
 	url = git://github.com/knu/elscreen.git
 [submodule "linum-relative"]
-	path = lisp/linum-relative
+	path = emacs/linum-relative
 	url = git://github.com/coldnew/linum-relative.git
 [submodule "markdown-mode"]
-	path = lisp/markdown-mode
+	path = emacs/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
 [submodule "paredit"]
-	path = lisp/paredit
+	path = emacs/paredit
 	url = http://mumble.net/~campbell/git/paredit.git/
 [submodule "magit"]
-	path = lisp/magit
+	path = emacs/magit
 	url = git://github.com/magit/magit.git
 [submodule "git-modes"]
-	path = lisp/git-modes
+	path = emacs/git-modes
 	url = git@github.com:magit/git-modes.git
 [submodule "slime"]
-	path = lisp/slime
+	path = emacs/slime
 	url = git@github.com:slime/slime.git
 [submodule "haskell-mode"]
-	path = lisp/haskell-mode
+	path = emacs/haskell-mode
 	url = git@github.com:haskell/haskell-mode.git
 [submodule "clojure-mode"]
-	path = lisp/clojure-mode
+	path = emacs/clojure-mode
 	url = git@github.com:clojure-emacs/clojure-mode.git
 [submodule "lisp/evil-leader"]
-	path = lisp/evil-leader
+	path = emacs/evil-leader
 	url = https://github.com/cofi/evil-leader
 [submodule "lisp/org-mode"]
-	path = lisp/org-mode
+	path = emacs/org-mode
 	url = git://orgmode.org/org-mode.git
 [submodule "lisp/pangu-spacing"]
-	path = lisp/pangu-spacing
+	path = emacs/pangu-spacing
 	url = git@github.com:coldnew/pangu-spacing.git

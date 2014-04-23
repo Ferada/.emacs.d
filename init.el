@@ -159,7 +159,19 @@ readable and adds it to the LOAD-PATH variable."
 (when-lisp-dir-available "slime"
   (require 'slime-autoloads)
   (slime-setup
-   '(slime-fancy
+   '(slime-repl
+     slime-autodoc
+     slime-c-p-c
+     slime-editing-commands
+     slime-fancy-inspector
+     slime-fancy-trace
+     slime-fuzzy
+     slime-presentations
+     slime-scratch
+     slime-references
+     slime-package-fu
+     slime-fontifying-fu
+     ;; slime-trace-dialog
      slime-asdf
      slime-tramp
      slime-presentations

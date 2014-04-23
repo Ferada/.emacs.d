@@ -285,6 +285,10 @@ readable and adds it to the LOAD-PATH variable."
   (setf org-plantuml-jar-path "/home/ferada/src/plantuml/plantuml.jar")
   (org-babel-do-load-languages 'org-babel-load-languages '((ditaa . t) (plantuml . t))))
 
+(autoload 'forth-mode "gforth.el")
+(autoload 'forth-block-mode "gforth.el")
+(add-to-list 'auto-mode-alist '("\\.fs$" . forth-mode))
+
 (when-lisp-dir-available "linum-relative"
   (require 'linum-relative))
 

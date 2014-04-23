@@ -113,6 +113,10 @@ readable and adds it to the LOAD-PATH variable."
   (global-undo-tree-mode))
 
 (when-lisp-dir-available "evil"
+  (when-lisp-dir-available "evil-leader"
+    (require 'evil-leader)
+    (global-evil-leader-mode))
+
   (require 'evil)
   (evil-mode 1)
 

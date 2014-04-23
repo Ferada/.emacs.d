@@ -1,0 +1,22 @@
+[user]
+  name = Olof-Joachim Frahm
+  email = olof@macrolet.net
+  signingkey = CE675F00
+
+[github]
+  user = Ferada
+
+[core]
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+
+[branch]
+  autosetuprebase = always
+
+[diff "lisp"]
+  xfuncname = "^(\\(def.*)$"

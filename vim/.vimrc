@@ -16,6 +16,7 @@ set lbr
 set modeline
 set noeb
 set nu
+set rnu
 set ruler
 set hidden
 

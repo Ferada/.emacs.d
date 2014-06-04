@@ -269,7 +269,8 @@ readable and adds it to the LOAD-PATH variable."
       (require 'magit))))
 
 (when-lisp-dir-available "haskell-mode"
-  (require 'haskell-mode-autoloads))
+  (when-lisp-file-available "haskell-mode-autoloads.el"
+    (require 'haskell-mode-autoloads)))
 
 (when-lisp-dir-available "clojure-mode"
   (autoload 'clojure-mode "clojure-mode" "Clojure" t)

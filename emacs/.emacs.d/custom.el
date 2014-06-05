@@ -77,6 +77,7 @@
  '(smex-auto-update nil)
  '(stripe-height 3)
  '(tool-bar-mode nil)
+ '(truncate-lines t)
  '(w3m-fill-column fill-column)
  '(w3m-use-cookies t)
  '(whitespace-global-modes (quote (not customize-mode gnus-summary-mode dired-mode)))

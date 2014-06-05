@@ -10,7 +10,8 @@
   '((straylight . "straylight.rentiernetz")
     (sprawl     . "SPRAWL")
     (goal-games . "EUGENB")
-    (macrolet . "macrolet.net")))
+    (macrolet . "macrolet.net")
+    (cytora-macbook-pro . "cytoras-MacBook-Pro.local")))
 
 (defvar system (car (rassoc system-name systems)))
 
@@ -56,12 +57,14 @@
    (set-frame-font "Consolas-10.0" t))
   (sprawl
    (set-frame-font "Consolas-9.0" t))
+  (cytora-macbook-pro
+   (set-frame-font "Menlo-12.0" t))
   (t
    (when (string-lessp emacs-version "23")
      (set-default-font "6x12" t))))
 
 (case system-type
-  (windows-nt
+  ((windows-nt darwin)
    (scroll-bar-mode -1)))
 
 (defmacro when-lisp-file-available (pathname &rest body)

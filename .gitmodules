@@ -43,3 +43,6 @@
 [submodule "lisp/pangu-spacing"]
 	path = emacs/.emacs.d/lisp/pangu-spacing
 	url = git@github.com:coldnew/pangu-spacing.git
+[submodule "emacs/.emacs.d/lisp/scss-mode"]
+	path = emacs/.emacs.d/lisp/scss-mode
+	url = git@github.com:antonj/scss-mode.git

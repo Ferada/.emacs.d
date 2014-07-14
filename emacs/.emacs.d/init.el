@@ -299,6 +299,12 @@ readable and adds it to the LOAD-PATH variable."
 (when-lisp-dir-available "pangu-spacing"
   (require 'pangu-spacing))
 
+(when-lisp-dir-available "lookup2"
+  (add-to-list 'load-path (user-lisp-file "lookup2/lisp"))
+  (add-to-list 'load-path (user-lisp-file "lookup2/lisp/support-files"))
+  (require 'lookup-autoloads)
+  (setf lookup-search-agents '((ndsary "~/edicts"))))
+
 (when-lisp-dir-available "scss-mode"
   (autoload 'scss-mode "scss-mode" t)
   (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode)))

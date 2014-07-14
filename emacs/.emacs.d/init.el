@@ -298,6 +298,10 @@ readable and adds it to the LOAD-PATH variable."
 
 (when-lisp-dir-available "pangu-spacing"
   (require 'pangu-spacing))
+
+(when-lisp-dir-available "scss-mode"
+  (autoload 'scss-mode "scss-mode" t)
+  (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode)))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

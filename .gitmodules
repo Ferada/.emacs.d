@@ -54,3 +54,6 @@
 [submodule "emacs/.emacs.d/lisp/web-mode"]
 	path = emacs/.emacs.d/lisp/web-mode
 	url = git@github.com:fxbois/web-mode.git
+[submodule "emacs/.emacs.d/lisp/js2-mode"]
+	path = emacs/.emacs.d/lisp/js2-mode
+	url = git@github.com:mooz/js2-mode.git

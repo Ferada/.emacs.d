@@ -20,8 +20,10 @@
 
  '(scroll-bar ((t (:foreground "#202020" :background "#020202"))))
 
- '(minibuffer-prompt ((t (:foreground "#b0007b"))))
+ '(minibuffer-prompt ((t (:foreground "#cae6fc"))))
  '(tooltip ((t (:foreground "#b7af9f" :background "#090909"))))
+
+ '(link ((t (:foreground "#5283cc"))))
 
  '(font-lock-builtin-face
    ((((class color) (min-colors 256))
@@ -41,7 +43,7 @@
     (((class color) (min-colors 256))
      (:foreground "#545454"))))
 
- '(font-lock-constant-face ((t (:foreground "#b0007b")))) ; e.g. NULL
+ '(font-lock-constant-face ((t (:foreground "#6035b0")))) ; e.g. NULL
 
  '(font-lock-doc-string-face ((t (:foreground "#ff0000"))))    ; ???
  '(font-lock-function-name-face ((t (:foreground "#454e82")))) ; functions
@@ -95,6 +97,8 @@
  '(italic ((t (:italic t))))
  '(bold ((t (:bold t))))
  '(bold-italic ((t (:bold t :italic t))))
+
+ '(ido-subdir ((t (:foreground "#5228cc"))))
 
  '(cperl-array-face ((t (:foreground "#b0007b"))))
  '(cperl-hash-face ((t (:foreground "#58857b"))))

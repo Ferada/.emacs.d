@@ -17,7 +17,7 @@ Emacs.cursorColor: #d0d0df
 
 !! urxvt
 URxvt*loginShell: false
-URxvt*font: xft:Monospace:pixelsize=10
+URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=11
 URxvt*saveLines: 500
 URxvt*geometry: 80x25
 URxvt*scrollBar: false
@@ -51,56 +51,60 @@ URxvtGreen*color7: #bebebe
 URxvtGreen*color15: #ffffff
 
 !! urxvt orange
-URxvt*cursorColor:   #ff7020
-!URxvt*cursorColor2:  #000000 ! which defaults to background
-URxvt*background:    black
-URxvt*foreground:    #ff9040
+URxvtOrange*cursorColor:   #ff7020
+!URxvtOrange*cursorColor2:  #000000 ! which defaults to background
+URxvtOrange*background:    black
+URxvtOrange*foreground:    #ff9040
 ! black, bright black
-URxvt*color0:        black
-URxvt*color8:        #303030
+URxvtOrange*color0:        black
+URxvtOrange*color8:        #303030
 ! red, bright red
-URxvt*color1:        #dc1616
-URxvt*color9:        #fc3c2c
+URxvtOrange*color1:        #dc1616
+URxvtOrange*color9:        #fc3c2c
 ! green, bright green
-URxvt*color2:        #73c400
-URxvt*color10:       #94de00
+URxvtOrange*color2:        #73c400
+URxvtOrange*color10:       #94de00
 ! yellow, bright yellow
-URxvt*color3:        #e69109
-URxvt*color11:       #ffc319
+URxvtOrange*color3:        #e69109
+URxvtOrange*color11:       #ffc319
 ! blue, bright blue
-URxvt*color4:        #403cb1
-URxvt*color12:       #00749e
+URxvtOrange*color4:        #403cb1
+URxvtOrange*color12:       #00749e
 ! purple, bright purple
-URxvt*color5:        #8326bf
-URxvt*color13:       #a24cbf
+URxvtOrange*color5:        #8326bf
+URxvtOrange*color13:       #a24cbf
 ! cyan, bright cyan
-URxvt*color6:        #217796
-URxvt*color14:       #4c97bf
+URxvtOrange*color6:        #217796
+URxvtOrange*color14:       #4c97bf
 ! white, bright white
-URxvt*color7:        #ffdb94
-URxvt*color15:       #fff3db
+URxvtOrange*color7:        #ffdb94
+URxvtOrange*color15:       #fff3db
 
 !! urxvt blueish, merged with emacs color theme
-URxvtBlue*cursorColor: #d0d0df
-!URxvtBlue*cursorColor: #707678
-URxvtBlue*background: #020202
-!URxvtBlue*background: black
-URxvtBlue*foreground: #b7af9f
-!URxvtBlue*foreground: #626262
+!URxvt*cursorColor: #d0d0df
+!!URxvt*cursorColor: #707678
+!URxvt*background: #020202
+!!URxvt*background: black
+!URxvt*foreground: #b7af9f
+!!URxvt*foreground: #626262
 
-URxvtBlue*color0: #2c2d2e
-URxvtBlue*color1: #ae4747
-URxvtBlue*color2: #696c59
-URxvtBlue*color3: #c7c93d
-URxvtBlue*color4: #6f99b4
-URxvtBlue*color5: #aa8cbf
-URxvtBlue*color6: #68b4b1
-URxvtBlue*color7: #707678
-URxvtBlue*color8: #a3a5a6
-URxvtBlue*color9: #ee6363
-URxvtBlue*color10: #90a57d
-URxvtBlue*color11: #d0c54d
-URxvtBlue*color12: #7c96b0
-URxvtBlue*color13: #8f4c70
-URxvtBlue*color14: #2d8285
-URxvtBlue*color15: #e2e2e2
+URxvt*cursorColor: #d0d0df
+URxvt*background: black
+URxvt*foreground: #b7af9f
+
+URxvt*color0: #2c2d2e
+URxvt*color1: #ae4747
+URxvt*color2: #696c59
+URxvt*color3: #c7c93d
+URxvt*color4: #6f99b4
+URxvt*color5: #aa8cbf
+URxvt*color6: #68b4b1
+URxvt*color7: #707678
+URxvt*color8: #a3a5a6
+URxvt*color9: #ee6363
+URxvt*color10: #90a57d
+URxvt*color11: #d0c54d
+URxvt*color12: #7c96b0
+URxvt*color13: #8f4c70
+URxvt*color14: #2d8285
+URxvt*color15: #e2e2e2

@@ -8,10 +8,9 @@
 
 (defvar systems
   '((straylight . "straylight.rentiernetz")
-    (sprawl     . "SPRAWL")
-    (goal-games . "EUGENB")
-    (macrolet . "macrolet.net")
-    (cytora-macbook-pro . "cytoras-MacBook-Pro.local")))
+    (ashpool . "ashpool.rentiernetz")
+    (sprawl . "SPRAWL")
+    (macrolet . "macrolet.net")))
 
 (defvar system (car (rassoc system-name systems)))
 
@@ -46,21 +45,19 @@
 (setf custom-theme-directory (user-directory "themes"))
 (setf custom-theme-load-path '(custom-theme-directory t))
 
-(if (string-lessp emacs-version "24")
+(if (version< emacs-version "24")
     (load-theme 'grey-blue)
   (load-theme 'grey-blue t))
 
 (case system
   (straylight
    (set-frame-font "Bitstream Vera Sans Mono-7.5" t))
-  (goal-games
-   (set-frame-font "Consolas-10.0" t))
+  (ashpool
+   (set-frame-font "Bitstream Vera Sans Mono-8" t))
   (sprawl
    (set-frame-font "Consolas-9.0" t))
-  (cytora-macbook-pro
-   (set-frame-font "Menlo-12.0" t))
   (t
-   (when (string-lessp emacs-version "23")
+   (when (version< emacs-version "23")
      (set-default-font "6x12" t))))
 
 (case system-type
@@ -200,10 +197,10 @@ readable and adds it to the LOAD-PATH variable."
       (apply 'slime-connect "127.0.0.1" args))))
 
 (case system
-  (straylight
-   (setf inferior-lisp-program "/usr/bin/sbcl"))
   (sprawl
-   (setf inferior-lisp-program "E:\\Programme\\sbcl\\sbcl")))
+   (setf inferior-lisp-program "E:\\Programme\\sbcl\\sbcl"))
+  (t
+   (setf inferior-lisp-program "sbcl")))
 
 (unless (eq system 'straylight)
   (when-lisp-dir-available "paredit"
@@ -280,6 +277,10 @@ readable and adds it to the LOAD-PATH variable."
   (add-to-list 'auto-mode-alist '("\\.clj[sx]?\\'" . clojure-mode))
   (add-hook 'clojure-mode-hook 'paredit-mode))
 
+(when-lisp-dir-available "csharp-mode"
+  (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
+  (add-to-list 'auto-mode-alist '("\\.cs" . csharp-mode)))
+
 (when-lisp-file-available "typopunct.el"
   (autoload 'typopunct-mode "typopunct" "Minor mode for automatic typographical punctuation" t)
   (add-hook 'text-mode 'typopunct-mode))
@@ -294,7 +295,8 @@ readable and adds it to the LOAD-PATH variable."
 (add-to-list 'auto-mode-alist '("\\.fs$" . forth-mode))
 
 (when-lisp-dir-available "linum-relative"
-  (require 'linum-relative))
+  (require 'linum-relative)
+  (global-linum-mode))
 
 (when-lisp-dir-available "pangu-spacing"
   (require 'pangu-spacing))
@@ -308,6 +310,10 @@ readable and adds it to the LOAD-PATH variable."
 (when-lisp-dir-available "scss-mode"
   (autoload 'scss-mode "scss-mode" t)
   (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode)))
+
+(when-lisp-dir-available "js2-mode"
+  (autoload 'js2-mode "js2-mode" "Major mode for editing JavaScript code." t)
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message
@@ -355,3 +361,5 @@ readable and adds it to the LOAD-PATH variable."
 
 ;; always require secrets to keep private stuff out of the custom variables
 (ignore-errors (load-library "secrets.el.gpg"))
+
+(global-set-key (kbd "H-1") 'toggle-input-method)

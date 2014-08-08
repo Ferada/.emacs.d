@@ -14,9 +14,13 @@
   st = status
   ci = commit
   co = checkout
+  pullify = "!f() { remote=${1-origin}; git config --add remote.$remote.fetch \"+refs/pull/*/head:refs/remotes/$remote/pr/*\"; }; f"
 
 [branch]
   autosetuprebase = always
 
 [diff "lisp"]
   xfuncname = "^(\\(def.*)$"
+
+[color]
+	ui = true

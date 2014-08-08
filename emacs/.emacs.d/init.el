@@ -10,7 +10,8 @@
   '((straylight . "straylight.rentiernetz")
     (ashpool . "ashpool.rentiernetz")
     (sprawl . "SPRAWL")
-    (macrolet . "macrolet.net")))
+    (macrolet . "macrolet.net")
+    (chiba . "chiba.cytora")))
 
 (defvar system (car (rassoc system-name systems)))
 
@@ -56,6 +57,8 @@
    (set-frame-font "Bitstream Vera Sans Mono-8" t))
   (sprawl
    (set-frame-font "Consolas-9.0" t))
+  (chiba
+   (set-frame-font "unifont-12.0" t))
   (t
    (when (version< emacs-version "23")
      (set-default-font "6x12" t))))

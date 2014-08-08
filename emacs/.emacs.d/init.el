@@ -312,7 +312,11 @@ readable and adds it to the LOAD-PATH variable."
 
 (when-lisp-dir-available "scss-mode"
   (autoload 'scss-mode "scss-mode" t)
-  (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode)))
+  (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+
+  (case system
+    (chiba
+     (setf scss-compile-at-save nil))))
 
 (when-lisp-dir-available "js2-mode"
   (autoload 'js2-mode "js2-mode" "Major mode for editing JavaScript code." t)

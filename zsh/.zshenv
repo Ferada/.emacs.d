@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export PATH="/home/rudolf/bin/:/home/rudolf/scripts/:/home/rudolf/src/opt/bin/:$PATH"
+export PATH="~/bin/:~/scripts/:~/src/opt/bin/:$PATH"
 
 export EDITOR=vim
 export BROWSER=links

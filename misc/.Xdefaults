@@ -92,13 +92,13 @@ URxvt*cursorColor: #d0d0df
 URxvt*background: black
 URxvt*foreground: #b7af9f
 
-URxvt*color0: #2c2d2e
-URxvt*color1: #ae4747
+URxvt*color0: #141414
+URxvt*color1: #a85d5d
 URxvt*color2: #696c59
-URxvt*color3: #c7c93d
-URxvt*color4: #6f99b4
+URxvt*color3: #c7c97d
+URxvt*color4: #7f909c
 URxvt*color5: #aa8cbf
-URxvt*color6: #68b4b1
+URxvt*color6: #8cb4b2
 URxvt*color7: #707678
 URxvt*color8: #a3a5a6
 URxvt*color9: #ee6363

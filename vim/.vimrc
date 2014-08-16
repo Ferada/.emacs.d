@@ -100,7 +100,7 @@ let g:haddock_docdir="/usr/share/doc/ghc-6.10.1/"
 let g:haddock_indexfiledir="/home/rudolf/.vim/"
 
 set t_Co=256
-colorscheme inkpot
+colorscheme greyblue
 syntax on
 
 if has("multi_byte")

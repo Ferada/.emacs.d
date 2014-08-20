@@ -57,3 +57,6 @@
 [submodule "emacs/.emacs.d/lisp/js2-mode"]
 	path = emacs/.emacs.d/lisp/js2-mode
 	url = git@github.com:mooz/js2-mode.git
+[submodule "emacs/.emacs.d/lisp/redshank"]
+	path = emacs/.emacs.d/lisp/redshank
+	url = git@github.com:emacsmirror/redshank.git

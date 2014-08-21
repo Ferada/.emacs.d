@@ -321,6 +321,9 @@ readable and adds it to the LOAD-PATH variable."
 (when-lisp-dir-available "js2-mode"
   (autoload 'js2-mode "js2-mode" "Major mode for editing JavaScript code." t)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
+
+(when-lisp-dir-available "w3m"
+  (require 'w3m-load))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

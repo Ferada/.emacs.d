@@ -1,5 +1,5 @@
 if [ $(hostname) = "chiba" ]; then
-  xrandr --output VGA1 --auto --left-of LVDS1 --mode 1920x1080
+  xrandr --output VGA1 --auto --above LVDS1 --mode 1920x1080
 fi
 
 setxkbmap -layout gb

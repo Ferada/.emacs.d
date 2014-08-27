@@ -38,3 +38,7 @@ if [[ ! $PATH =~ ~/bin ]]; then
   export PATH=~/bin:~/src/opt/bin:$PATH
   export INFOPATH=~/.info:$INFOPATH
 fi
+
+export HISTSIZE=10000
+export HISTFILE="$HOME/.zshist"
+export SAVEHIST=$HISTSIZE

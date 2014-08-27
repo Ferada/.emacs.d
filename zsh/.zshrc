@@ -4,6 +4,10 @@ autoload -Uz compinit promptinit && compinit && promptinit
 
 autoload zrecompile
 
+autoload edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
 zsh_cache=${HOME}/.zsh_cache
 mkdir -p $zsh_cache
 compinit -d $zsh_cache/zcomp-$HOST

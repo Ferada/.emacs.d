@@ -373,4 +373,17 @@ readable and adds it to the LOAD-PATH variable."
 ;; always require secrets to keep private stuff out of the custom variables
 (ignore-errors (load-library "secrets.el.gpg"))
 
-(global-set-key (kbd "H-1") 'toggle-input-method)
+(defun toggle-japanese-input-method ()
+  (interactive)
+  (if current-input-method
+      (deactivate-input-method)
+      (set-input-method 'japanese)))
+
+(defun toggle-german-input-method ()
+  (interactive)
+  (if current-input-method
+      (deactivate-input-method)
+      (set-input-method 'german)))
+
+(global-set-key (kbd "H-1") 'toggle-german-input-method)
+(global-set-key (kbd "H-2") 'toggle-japanese-input-method)

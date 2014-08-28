@@ -2,11 +2,10 @@ zmodload zsh/complist
 autoload -Uz compinit promptinit && compinit && promptinit
 # prompt gentoo
 
-autoload zrecompile
-
 autoload edit-command-line
 zle -N edit-command-line
-bindkey "^X^E" edit-command-line
+
+autoload zrecompile
 
 zsh_cache=${HOME}/.zsh_cache
 mkdir -p $zsh_cache

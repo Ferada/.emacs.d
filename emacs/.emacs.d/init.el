@@ -316,6 +316,7 @@ readable and adds it to the LOAD-PATH variable."
 
   (case system
     (chiba
+     ;; because grunt does that for us already
      (setf scss-compile-at-save nil))))
 
 (when-lisp-dir-available "js2-mode"

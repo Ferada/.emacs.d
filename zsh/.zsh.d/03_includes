@@ -2,3 +2,8 @@ if [ -f /usr/share/mc/mc.gentoo ]
 then
   . /usr/share/mc/mc.gentoo
 fi
+
+if [ -f /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]
+then
+  . /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi

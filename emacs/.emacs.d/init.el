@@ -388,3 +388,8 @@ readable and adds it to the LOAD-PATH variable."
 
 (global-set-key (kbd "H-1") 'toggle-german-input-method)
 (global-set-key (kbd "H-2") 'toggle-japanese-input-method)
+
+(global-set-key (kbd "H-b") 'ido-switch-buffer)
+
+(global-set-key (kbd "H-g") 'keyboard-quit)
+(define-key minibuffer-local-map (kbd "H-g") 'abort-recursive-edit)

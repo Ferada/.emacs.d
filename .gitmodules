@@ -59,7 +59,7 @@
 	url = git@github.com:mooz/js2-mode.git
 [submodule "emacs/.emacs.d/lisp/redshank"]
 	path = emacs/.emacs.d/lisp/redshank
-	url = git@github.com:emacsmirror/redshank.git
+	url = git@github.com:Ferada/redshank.git
 [submodule "emacs/.emacs.d/lisp/w3m"]
 	path = emacs/.emacs.d/lisp/w3m
 	url = git@github.com:emacsmirror/w3m.git

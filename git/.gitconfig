@@ -23,7 +23,7 @@
   xfuncname = "^(\\(def.*)$"
 
 [color]
-	ui = true
+  ui = true
 
 [push]
   default = nothing

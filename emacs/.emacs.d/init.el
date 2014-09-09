@@ -357,6 +357,9 @@ readable and adds it to the LOAD-PATH variable."
   (lisp-interaction-mode)
   (make-local-variable 'kill-buffer-query-functions)
   (add-hook 'kill-buffer-query-functions 'kill-scratch-buffer))
+
+(add-hook-body 'dired-load-hook
+  (load "dired-x"))
 
 (setf column-number-mode t)
 (setf indent-tabs-mode nil)

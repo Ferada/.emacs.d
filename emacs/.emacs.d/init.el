@@ -299,7 +299,9 @@ readable and adds it to the LOAD-PATH variable."
 
 (when-lisp-dir-available "linum-relative"
   (require 'linum-relative)
-  (global-linum-mode))
+  (global-linum-mode)
+
+  (add-hook 'after-revert-hook 'linum-update-current))
 
 (when-lisp-dir-available "pangu-spacing"
   (require 'pangu-spacing))

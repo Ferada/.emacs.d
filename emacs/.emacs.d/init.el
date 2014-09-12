@@ -360,8 +360,10 @@ readable and adds it to the LOAD-PATH variable."
   (make-local-variable 'kill-buffer-query-functions)
   (add-hook 'kill-buffer-query-functions 'kill-scratch-buffer))
 
-(add-hook-body 'dired-load-hook
-  (load "dired-x"))
+(if (featurep 'dired)
+    (require 'dired-x)
+  (add-hook-body 'dired-load-hook
+    (require 'dired-x)))
 
 (setf column-number-mode t)
 (setf indent-tabs-mode nil)

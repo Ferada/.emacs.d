@@ -11,6 +11,7 @@
  '(calendar-week-start-day 1)
  '(confirm-nonexistent-file-or-buffer nil)
  '(cscope-do-not-update-database t)
+ '(css-indent-offset 2)
  '(diary-display-function (quote (fancy-diary-display)))
  '(diary-list-entries-hook
    (quote

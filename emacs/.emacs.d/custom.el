@@ -91,6 +91,7 @@
  '(inhibit-startup-echo-area-message t)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
+ '(js2-basic-offset 2)
  '(line-move-visual nil)
  '(linum-relative-current-symbol "")
  '(markdown-command "markdown_py")

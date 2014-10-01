@@ -336,6 +336,8 @@ readable and adds it to the LOAD-PATH variable."
         (format ";; scratch buffer created %s\n\n"
                 (format-time-string "%Y-%m-%d at %T"))))
 
+(reset-scratch-message)
+
 (defun insert-scratch-message ()
   (insert (reset-scratch-message)))
 

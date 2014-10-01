@@ -16,6 +16,7 @@
  '(diary-list-entries-hook
    (quote
     (include-other-diary-files bbdb-include-anniversaries sort-diary-entries)))
+ '(dired-dwim-target t)
  '(display-time-world-list
    (quote
     (("America/Los_Angeles" "Seattle")

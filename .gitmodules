@@ -63,3 +63,6 @@
 [submodule "emacs/.emacs.d/lisp/w3m"]
 	path = emacs/.emacs.d/lisp/w3m
 	url = git@github.com:emacsmirror/w3m.git
+[submodule "emacs/.emacs.d/lisp/ess"]
+	path = emacs/.emacs.d/lisp/ess
+	url = git@github.com:emacs-ess/ESS.git

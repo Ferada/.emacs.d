@@ -327,6 +327,9 @@ readable and adds it to the LOAD-PATH variable."
 
 (when-lisp-dir-available "w3m"
   (require 'w3m-load))
+
+(when-lisp-dir-available "ess/lisp"
+  (load "ess-site"))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

@@ -330,6 +330,17 @@ readable and adds it to the LOAD-PATH variable."
 
 (when-lisp-dir-available "ess/lisp"
   (load "ess-site"))
+
+(when-lisp-dir-available "dash.el"
+  (require 'dash)
+
+  (dash-enable-font-lock))
+
+(when-lisp-dir-available "s.el"
+  (require 's))
+
+(when-lisp-dir-available "ag.el"
+  (require 'ag))
 
 (defun reset-scratch-message ()
   (setf initial-scratch-message

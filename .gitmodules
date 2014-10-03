@@ -66,3 +66,12 @@
 [submodule "emacs/.emacs.d/lisp/ess"]
 	path = emacs/.emacs.d/lisp/ess
 	url = git@github.com:emacs-ess/ESS.git
+[submodule "emacs/.emacs.d/lisp/ag.el"]
+	path = emacs/.emacs.d/lisp/ag.el
+	url = git@github.com:Wilfred/ag.el.git
+[submodule "emacs/.emacs.d/lisp/dash.el"]
+	path = emacs/.emacs.d/lisp/dash.el
+	url = git@github.com:magnars/dash.el.git
+[submodule "emacs/.emacs.d/lisp/s.el"]
+	path = emacs/.emacs.d/lisp/s.el
+	url = git@github.com:magnars/s.el.git

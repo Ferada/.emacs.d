@@ -6,6 +6,7 @@
  `(default ((t (:foreground "#b7af9f" :background "#020202"))))
  '(region ((t (:foreground "#abadde" :background "#2d2d3a"))))
  '(cursor ((t (:background "#d0d0df"))))
+ '(mouse ((t (:background "#ffffff"))))
 
  '(mode-line ((t (:foreground "#e8d5c0" :background "#101010"))))
  '(mode-line-inactive ((t (:foreground "#e8d5c0" :background "#262626"))))

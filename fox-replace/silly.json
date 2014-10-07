@@ -1,0 +1,61 @@
+{
+  "version": "0.15",
+  "groups": [
+    {
+      "name": "Butt",
+      "urls": [
+        "*"
+      ],
+      "substitutions": [
+        {
+          "input": "cloud",
+          "inputType": "text",
+          "output": "butt",
+          "caseSensitive": true
+        },
+        {
+          "input": "Cloud",
+          "inputType": "text",
+          "output": "Butt",
+          "caseSensitive": true
+        }
+      ],
+      "html": "none",
+      "enabled": true
+    },
+    {
+      "name": "Horse",
+      "urls": [
+        "*"
+      ],
+      "substitutions": [
+        {
+          "input": "force",
+          "inputType": "text",
+          "output": "horse",
+          "caseSensitive": true
+        },
+        {
+          "input": "Force",
+          "inputType": "text",
+          "output": "Horse",
+          "caseSensitive": true
+        },
+        {
+          "input": "forcing",
+          "inputType": "text",
+          "output": "horsing",
+          "caseSensitive": true
+        },
+        {
+          "input": "Forcing",
+          "inputType": "text",
+          "output": "Horsing",
+          "caseSensitive": true
+        }
+      ],
+      "html": "none",
+      "enabled": true
+    }
+  ]
+}

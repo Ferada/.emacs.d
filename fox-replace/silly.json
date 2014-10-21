@@ -56,6 +56,28 @@
       ],
       "html": "none",
       "enabled": true
+    },
+    {
+      "name": "Leopard",
+      "urls": [
+        "*"
+      ],
+      "substitutions": [
+        {
+          "input": "keyboard",
+          "inputType": "text",
+          "output": "leopard",
+          "caseSensitive": true
+        },
+        {
+          "input": "Keyboard",
+          "inputType": "text",
+          "output": "Leopard",
+          "caseSensitive": false
+        }
+      ],
+      "html": "none",
+      "enabled": true
     }
   ]
 }

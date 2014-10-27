@@ -73,7 +73,7 @@
           "input": "Keyboard",
           "inputType": "text",
           "output": "Leopard",
-          "caseSensitive": false
+          "caseSensitive": true
         }
       ],
       "html": "none",

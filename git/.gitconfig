@@ -1,7 +1,7 @@
 [user]
   name = Olof-Joachim Frahm
   email = olof@macrolet.net
-  signingkey = CE675F00
+  signingkey = 85874366
 
 [github]
   user = Ferada
@@ -27,3 +27,6 @@
 
 [push]
   default = nothing
+
+[commit]
+  gpgsign = true

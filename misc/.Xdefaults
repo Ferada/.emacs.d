@@ -1,3 +1,11 @@
+!! wtf.
+Rxvt.print-pipe: "cat > /dev/null"
+URxvt.print-pipe: "cat > /dev/null"
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+
 Xft.dpi: 96.0
 Xft.rgba: rgb
 Xft.antialias: true
@@ -17,7 +25,7 @@ Emacs.cursorColor: #d0d0df
 
 !! urxvt
 URxvt*loginShell: false
-URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=11
+URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=false:autohinting=true
 URxvt*saveLines: 500
 URxvt*geometry: 80x25
 URxvt*scrollBar: false
